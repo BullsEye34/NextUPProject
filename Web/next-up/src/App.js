@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     zIndex: 10,
     backgroundColor: 'white',
     borderRadius: 20,
-    boxShadow: 'rgba(0, 0, 0, 0.07) 0px 1px 500px, rgba(0, 0, 0, 0.07) 0px 1px 500px'
+    boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 350px, rgba(0, 0, 0, 0.1) 0px 1px 350px'
   },
   bullet: {
     display: 'inline-block',
