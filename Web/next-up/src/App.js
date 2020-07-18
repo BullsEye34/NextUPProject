@@ -7,10 +7,11 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import back from './assets/mainBackground.png';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 1500,
+    flexGrow: 1,
     minHeight: 700,
     zIndex: 0,
     backgroundColor: 'white',
@@ -45,7 +46,34 @@ function App() {
         <div className="Background-image">
 
           <img src={back} className="image"></img>
-          <Card className={classes.root}>
+          <Grid container spacing={3}
+            justify="center">
+            <Grid item xs={6}>
+              <Card className={classes.root}>
+                <CardContent>
+                  <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    Word of the Day
+        </Typography>
+                  <Typography variant="h5" component="h2">
+                    be{bull}nev{bull}o{bull}lent
+        </Typography>
+                  <Typography className={classes.pos} color="textSecondary">
+                    adjective
+        </Typography>
+                  <Typography variant="body2" component="p">
+                    well meaning and kindly.
+          <br />
+                    {'"a benevolent smile"'}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+          </Grid>
+          {/* <Card className={classes.root}>
             <CardContent>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
                 Word of the Day
@@ -65,7 +93,7 @@ function App() {
             <CardActions>
               <Button size="small">Learn More</Button>
             </CardActions>
-          </Card>
+          </Card> */}
         </div>
 
       </header>
