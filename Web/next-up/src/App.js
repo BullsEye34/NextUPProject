@@ -8,10 +8,14 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import back from './assets/mainBackground.png';
 
-
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
+    minWidth: 1500,
+    minHeight: 700,
+    zIndex: 0,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    boxShadow: 'rgba(0, 0, 0, 0.07) 0px 1px 500px, rgba(0, 0, 0, 0.07) 0px 1px 500px'
   },
   bullet: {
     display: 'inline-block',
