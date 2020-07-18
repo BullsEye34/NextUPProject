@@ -1,0 +1,19 @@
+{
+  "name": "nextup",
+  "version": "1.0.0",
+  "description": "NextUP Project of ML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BullsEye34/NextUPProject.git"
+  },
+  "author": "Vamshi Prasad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BullsEye34/NextUPProject/issues"
+  },
+  "homepage": "https://github.com/BullsEye34/NextUPProject#readme"
+}
