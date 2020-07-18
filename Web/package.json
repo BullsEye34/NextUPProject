@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BullsEye34/NextUPProject/issues"
   },
-  "homepage": "https://github.com/BullsEye34/NextUPProject#readme"
+  "homepage": "https://github.com/BullsEye34/NextUPProject#readme",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
 }
