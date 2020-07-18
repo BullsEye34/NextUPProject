@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a> */}
-        <img src={mainBackground}></img>
+        <div className="Background-image"></div>
       </header>
     </div>
   );
