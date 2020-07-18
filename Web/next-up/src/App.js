@@ -11,9 +11,8 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   root: {
-    flexGrow: 1,
     minHeight: 700,
-    zIndex: 0,
+    zIndex: 10,
     backgroundColor: 'white',
     borderRadius: 20,
     boxShadow: 'rgba(0, 0, 0, 0.07) 0px 1px 500px, rgba(0, 0, 0, 0.07) 0px 1px 500px'
@@ -45,11 +44,10 @@ function App() {
 
         <div className="Background-image">
 
-          <img src={back} className="image"></img>
           <Grid container spacing={3}
             justify="center">
-            <Grid item xs={6}>
-              <Card className={classes.root}>
+            <Grid item xs={9}>
+              <Card className={classes.root} >
                 <CardContent>
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Word of the Day
@@ -71,8 +69,10 @@ function App() {
                 </CardActions>
               </Card>
             </Grid>
-
           </Grid>
+
+          <img src={back} className="image"></img>
+
           {/* <Card className={classes.root}>
             <CardContent>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
