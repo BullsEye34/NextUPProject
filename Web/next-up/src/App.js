@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import back from './assets/mainBackground.png';
 
 
 const useStyles = makeStyles({
@@ -38,6 +39,8 @@ function App() {
       <header className="background">
 
         <div className="Background-image">
+
+          <img src={back} className="image"></img>
           <Card className={classes.root}>
             <CardContent>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
