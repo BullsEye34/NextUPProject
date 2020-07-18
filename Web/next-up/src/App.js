@@ -45,7 +45,7 @@ function App() {
         <div className="Background-image">
 
           <Grid container spacing={3}
-            justify="center">
+            justify="center" style={{ zIndex: 1, }}>
             <Grid item xs={9}>
               <Card className={classes.root} >
                 <CardContent>
