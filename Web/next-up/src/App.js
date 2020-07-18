@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import mainBackground from './assets/mainBackground.png';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         >
           Learn React
         </a> */}
-        <img src={"assets/mainBackground.png"}></img>
+        <img src={mainBackground}></img>
       </header>
     </div>
   );
