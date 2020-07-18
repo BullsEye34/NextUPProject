@@ -13,8 +13,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* .App-header {
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,21 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+.background{
+  background-color: #ffffff;
+}
+
+.Background-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;
+  opacity: 10%;
+  background: url("assets/mainBackground.png") no-repeat center / cover;
 }
 
 .App-link {
