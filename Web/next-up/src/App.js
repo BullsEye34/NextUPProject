@@ -18,9 +18,7 @@ function App() {
         >
           Learn React
         </a> */}
-        <div className="background">
-
-        </div>
+        <img src={"assets/mainBackground.png"}></img>
       </header>
     </div>
   );
