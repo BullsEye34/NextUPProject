@@ -29,6 +29,7 @@
 
 .Background-image{
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -36,8 +37,15 @@
   color: white;
   position: relative;
   min-height: 100vh;
+  opacity: 100%;
+  /* background: rgba(0,0,0,0.1) url("assets/mainBackground.png") no-repeat top / cover ; */
+}
+
+.image{
+  position: absolute;
+  width: 100vw;
+  top: 0;
   opacity: 10%;
-  background: rgba(0,0,0,0.1) url("assets/mainBackground.png") no-repeat top / cover ;
 }
 
 .App-link {
