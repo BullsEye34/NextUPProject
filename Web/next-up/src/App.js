@@ -47,6 +47,9 @@ function App() {
           <Grid container spacing={3}
             justify="center" style={{ zIndex: 1, }}>
             <Grid item xs={9}>
+              <Typography variant="h1" component="h1" style={{ color: "grey" }}>
+                House Price Detection
+        </Typography>
               <Card className={classes.root} >
                 <CardContent>
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
