@@ -55,18 +55,29 @@ function App() {
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
         </Typography><br></br>
-                  <Grid container spacing={10}
+                  {/* <Grid container spacing={10}
                     justify="center" style={{ zIndex: 1, }}>
                     <form noValidate autoComplete="off">
                       <Grid item xs >
-                        <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10 }} />
+                        <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }} />
                         <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
-                        <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10 }} />
+                        <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10, }} />
                       </Grid>
 
 
                     </form>
-                  </Grid>
+                  </Grid> */}
+                  <form>
+                    <div style={{
+                      display: 'flex', flexDirection: 'row', justifyContent: 'center'
+                    }}>
+                      <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }
+                      } />
+                      <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
+
+                      <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10, }} />
+                    </div>
+                  </form>
                 </CardContent>
 
               </Card>
