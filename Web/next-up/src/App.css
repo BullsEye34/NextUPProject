@@ -27,12 +27,7 @@
   background-color: #ffffff;
 }
 
-.textfielda{
-  display: 'flex';
-  flex-direction: row;
-  justify-content: stretch;
 
-}
 
 .Background-image{
   display: flex;

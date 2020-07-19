@@ -8,6 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import back from './assets/mainBackground.png';
 import Grid from '@material-ui/core/Grid';
 
+
+
 const useStyles = makeStyles({
   root: {
     minHeight: 700,
@@ -29,6 +31,17 @@ const useStyles = makeStyles({
   },
 });
 function App() {
+  var sty;
+  console.log(window.innerWidth);
+  if (window.innerWidth <= 500) {
+    sty = {
+      display: 'flex', flexDirection: 'column', justifyContent: 'center'
+    };
+  } else if (window.innerWidth > 500) {
+    sty = {
+      display: 'flex', flexDirection: 'row', justifyContent: 'center'
+    };
+  }
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   return (
@@ -55,29 +68,17 @@ function App() {
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
         </Typography><br></br>
-                  {/* <Grid container spacing={10}
-                    justify="center" style={{ zIndex: 1, }}>
-                    <form noValidate autoComplete="off">
-                      <Grid item xs >
-                        <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }} />
-                        <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
-                        <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10, }} />
-                      </Grid>
-
-
-                    </form>
-                  </Grid> */}
                   <form>
-                    <div className="textfielda">
+                    <div style={sty}>
                       <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }} />
                       <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
                       <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10, }} />
-                    </div>
-                    <div className="textfielda">
+                    </div><br></br>
+                    <div style={sty}>
                       <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={{ margin: 10 }} />
                       <TextField id="outlined-basic" label="Year Built" variant="outlined" style={{ margin: 10 }} />
-                    </div>
-                    <div className="textfielda">
+                    </div><br></br>
+                    <div style={sty}>
                       <TextField id="outlined-basic" label="City" variant="outlined" style={{ margin: 10 }} />
                     </div>
                   </form>
@@ -88,28 +89,6 @@ function App() {
           </Grid>
 
           <img src={back} className="image"></img>
-
-          {/* <Card className={classes.root}>
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
-                Word of the Day
-        </Typography>
-              <Typography variant="h5" component="h2">
-                be{bull}nev{bull}o{bull}lent
-        </Typography>
-              <Typography className={classes.pos} color="textSecondary">
-                adjective
-        </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-          <br />
-                {'"a benevolent smile"'}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card> */}
         </div>
 
       </header>
