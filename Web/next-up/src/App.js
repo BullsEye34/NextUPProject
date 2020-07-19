@@ -95,7 +95,7 @@ function App() {
                     <Button
                       variant="contained"
                       color="primary"
-                      style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20 }}
+                      style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20, width: (window.innerWidth / 4) }}
                       disableElevation
                     >
                       SUBMIT</Button>
