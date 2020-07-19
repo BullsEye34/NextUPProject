@@ -91,7 +91,7 @@ function App() {
                     <div style={sty}>
                       <TextField id="outlined-basic" label="City" variant="outlined" style={textSty2} />
                     </div>
-                    <br></br>
+                    <br></br><br></br>
                     <Button
                       variant="contained"
                       color="primary"
@@ -102,7 +102,7 @@ function App() {
                   </form>
                 </CardContent>
 
-              </Card>
+              </Card><br></br>
             </Grid>
           </Grid>
 
