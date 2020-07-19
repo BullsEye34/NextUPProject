@@ -50,6 +50,7 @@ function App() {
               <Typography variant="h1" component="h1" style={{ color: "grey" }}>
                 House Price Detection
         </Typography>
+              <br></br>
               <Card className={classes.root} >
                 <CardContent>
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
