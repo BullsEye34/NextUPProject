@@ -57,9 +57,12 @@ function App() {
         </Typography>
                   <Grid container spacing={3}
                     justify="center" style={{ zIndex: 1, }}>
-                    <Grid item xs={9}>
+                    <form noValidate autoComplete="off">
+                      <Grid item xs={9}>
+                        <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" />
+                      </Grid>
 
-                    </Grid>
+                    </form>
                   </Grid>
                 </CardContent>
 
