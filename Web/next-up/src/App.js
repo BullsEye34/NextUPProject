@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    fontSize: 20,
   },
   pos: {
     marginBottom: 12,
@@ -47,26 +47,16 @@ function App() {
           <Grid container spacing={3}
             justify="center" style={{ zIndex: 1, }}>
             <Grid item xs={9}>
-              <Typography variant="h1" component="h1" style={{ color: "grey" }}>
+              <Typography variant="h2" component="h2" style={{ color: "grey" }}>
                 House Price Detection
         </Typography>
               <br></br>
               <Card className={classes.root} >
                 <CardContent>
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
+                    Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
         </Typography>
-                  <Typography variant="h5" component="h2">
-                    be{bull}nev{bull}o{bull}lent
-        </Typography>
-                  <Typography className={classes.pos} color="textSecondary">
-                    adjective
-        </Typography>
-                  <Typography variant="body2" component="p">
-                    well meaning and kindly.
-          <br />
-                    {'"a benevolent smile"'}
-                  </Typography>
+
                 </CardContent>
                 <CardActions>
                   <Button size="small">Learn More</Button>
