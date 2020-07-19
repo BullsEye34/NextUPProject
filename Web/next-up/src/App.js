@@ -68,9 +68,7 @@ function App() {
                     </form>
                   </Grid> */}
                   <form>
-                    <div style={{
-                      display: 'flex', flexDirection: 'row', justifyContent: 'center'
-                    }}>
+                    <div className="textfield" >
                       <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }
                       } />
                       <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />

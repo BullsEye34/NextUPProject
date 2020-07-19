@@ -27,6 +27,13 @@
   background-color: #ffffff;
 }
 
+.textfield{
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'center';
+
+}
+
 .Background-image{
   display: flex;
   overflow: hidden;
