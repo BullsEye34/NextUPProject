@@ -69,16 +69,16 @@ function App() {
                   </Grid> */}
                   <form>
                     <div className="textfielda">
-                      <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }
-                      } />
+                      <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }} />
                       <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
-
                       <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10, }} />
                     </div>
                     <div className="textfielda">
                       <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={{ margin: 10 }} />
                       <TextField id="outlined-basic" label="Year Built" variant="outlined" style={{ margin: 10 }} />
-
+                    </div>
+                    <div className="textfielda">
+                      <TextField id="outlined-basic" label="City" variant="outlined" style={{ margin: 10 }} />
                     </div>
                   </form>
                 </CardContent>
