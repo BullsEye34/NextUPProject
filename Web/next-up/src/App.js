@@ -54,7 +54,7 @@ function App() {
                 <CardContent>
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
-        </Typography>
+        </Typography><br></br>
                   <Grid container spacing={3}
                     justify="center" style={{ zIndex: 1, }}>
                     <form noValidate autoComplete="off">
