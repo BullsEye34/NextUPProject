@@ -39,7 +39,7 @@ function App() {
     };
   } else if (window.innerWidth > 500) {
     sty = {
-      display: 'flex', flexDirection: 'row', justifyContent: 'center'
+      display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'
     };
   }
   const classes = useStyles();
