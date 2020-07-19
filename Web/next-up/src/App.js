@@ -33,16 +33,25 @@ const useStyles = makeStyles({
 });
 function App() {
   var sty;
-  console.log(window.innerWidth);
+  var textSty;
+  var textSty1;
+  var textSty2;
   if (window.innerWidth <= 500) {
     sty = {
       display: 'flex', flexDirection: 'column', justifyContent: 'center'
     };
+    textSty = { margin: 10, };
+    textSty1 = { margin: 10, };
+    textSty2 = { margin: 10, };
   } else if (window.innerWidth > 500) {
     sty = {
       display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'
     };
+    textSty = { margin: 10, width: (window.innerWidth / 4) };
+    textSty1 = { margin: 10, width: (window.innerWidth / 6) };
+    textSty2 = { margin: 10, width: (window.innerWidth / 3) };
   }
+
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   return (
@@ -71,16 +80,16 @@ function App() {
         </Typography><br></br>
                   <form>
                     <div style={sty}>
-                      <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }} />
-                      <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
-                      <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10, }} />
+                      <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={textSty1} />
+                      <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={textSty1} />
+                      <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={textSty1} />
                     </div><br></br>
                     <div style={sty}>
-                      <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={{ margin: 10 }} />
-                      <TextField id="outlined-basic" label="Year Built" variant="outlined" style={{ margin: 10 }} />
+                      <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
+                      <TextField id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
                     </div><br></br>
                     <div style={sty}>
-                      <TextField id="outlined-basic" label="City" variant="outlined" style={{ margin: 10 }} />
+                      <TextField id="outlined-basic" label="City" variant="outlined" style={textSty2} />
                     </div>
                     <br></br>
                     <Button
