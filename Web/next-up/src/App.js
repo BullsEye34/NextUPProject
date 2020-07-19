@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import back from './assets/mainBackground.png';
 import Grid from '@material-ui/core/Grid';
+import Button from "@material-ui/core/Button";
 
 
 
@@ -81,6 +82,14 @@ function App() {
                     <div style={sty}>
                       <TextField id="outlined-basic" label="City" variant="outlined" style={{ margin: 10 }} />
                     </div>
+                    <br></br>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20 }}
+                      disableElevation
+                    >
+                      SUBMIT</Button>
                   </form>
                 </CardContent>
 
