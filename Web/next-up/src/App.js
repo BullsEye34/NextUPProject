@@ -75,6 +75,11 @@ function App() {
 
                       <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10, }} />
                     </div>
+                    <div className="textfielda">
+                      <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={{ margin: 10 }} />
+                      <TextField id="outlined-basic" label="Year Built" variant="outlined" style={{ margin: 10 }} />
+
+                    </div>
                   </form>
                 </CardContent>
 
