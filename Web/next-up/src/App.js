@@ -56,7 +56,12 @@ function App() {
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
         </Typography>
+                  <Grid container spacing={3}
+                    justify="center" style={{ zIndex: 1, }}>
+                    <Grid item xs={9}>
 
+                    </Grid>
+                  </Grid>
                 </CardContent>
 
               </Card>
