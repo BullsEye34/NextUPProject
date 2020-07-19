@@ -68,7 +68,7 @@ function App() {
                     </form>
                   </Grid> */}
                   <form>
-                    <div className="textfield" >
+                    <div className="textfielda">
                       <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10, }
                       } />
                       <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
