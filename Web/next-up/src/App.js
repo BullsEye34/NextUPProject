@@ -55,12 +55,15 @@ function App() {
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
                     Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
         </Typography><br></br>
-                  <Grid container spacing={3}
+                  <Grid container spacing={10}
                     justify="center" style={{ zIndex: 1, }}>
                     <form noValidate autoComplete="off">
-                      <Grid item xs={9}>
-                        <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" />
+                      <Grid item xs >
+                        <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={{ margin: 10 }} />
+                        <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={{ margin: 10 }} />
+                        <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={{ margin: 10 }} />
                       </Grid>
+
 
                     </form>
                   </Grid>
