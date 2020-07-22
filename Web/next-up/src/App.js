@@ -93,13 +93,15 @@ function App() {
                       <TextField id="outlined-basic" label="City" variant="outlined" style={textSty2} />
                     </div>
                     <br></br><br></br>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20, width: (window.innerWidth / 4) }}
-                      disableElevation
-                    >
-                      SUBMIT</Button>
+                    <Link to="/result">
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20, width: (window.innerWidth / 4) }}
+                        disableElevation
+                      >
+                        SUBMIT</Button>
+                    </Link>
                   </form>
                 </CardContent>
 
