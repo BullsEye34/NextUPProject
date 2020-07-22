@@ -2,11 +2,7 @@ import React from 'react';
 import './App.css';
 import Result from './result'
 import Home from './home'
-import { Route, Link } from 'react-router-dom'
-
-
-
-
+import { Route } from 'react-router-dom'
 function App() {
 
   return (
