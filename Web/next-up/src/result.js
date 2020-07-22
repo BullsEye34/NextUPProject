@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import back from './assets/house.png';
+import Grid from '@material-ui/core/Grid';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
 
 
 
@@ -47,7 +51,24 @@ function Result() {
 
                 <div className="Background-image">
 
+                    <Grid container spacing={3}
+                        justify="center" style={{ zIndex: 1, }}>
+                        <Grid item xs={9}>
+                            <Typography variant="h2" component="h2" style={{ color: "grey" }}>
+                                House Price Detection
+    </Typography>
+                            <br></br>
+                            <Card className={classes.root} >
+                                <CardContent>
+                                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                        Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
+    </Typography><br></br>
 
+                                </CardContent>
+
+                            </Card><br></br>
+                        </Grid>
+                    </Grid>
 
                     <img src={back} className="image"></img>
                 </div>
