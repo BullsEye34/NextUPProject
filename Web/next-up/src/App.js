@@ -111,6 +111,8 @@ function App() {
         </div>
 
       </header>
+      <Route exact to="/" component={App}></Route>
+      <Route exact to="/result" component={Result}></Route>
     </div>
   );
 }
