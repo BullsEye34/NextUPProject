@@ -61,7 +61,9 @@ function Result() {
                             <Card className={classes.root} >
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                        Hi, Welcome to our new Project. Please, enter your preferences, so that we can help you find the best suggestion for you!
+                                        Well, based on Whatever you've given us.... <br></br>We think that your dream property might cost you around<br></br><br></br></Typography>
+                                    <Typography className={classes.title} style={{ fontSize: 50 }} color="textSecondary" gutterBottom>₹ 9876159843<br></br><br></br></Typography>
+                                    <Typography className={classes.title} color="textSecondary" gutterBottom>You can click on the button below, so that we can get you in touch with one of our agents.
     </Typography><br></br>
 
                                 </CardContent>
