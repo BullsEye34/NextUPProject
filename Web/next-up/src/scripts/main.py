@@ -10,6 +10,10 @@ from sklearn.ensemble import RandomForestRegressor
 
 from sklearn.preprocessing import LabelEncoder
 
+from flask import Flask
+
+app = Flask(__name__)
+
 
 dataset = pd.read_csv('cleandataset.csv')
 print(dataset)
