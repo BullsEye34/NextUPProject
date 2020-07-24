@@ -15,14 +15,6 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/time')
-def get_current_time():
-    return {'time': time.time()}
-
-
-app.run(debug=True)
-
-
 dataset = pd.read_csv('cleandataset.csv')
 print(dataset)
 le = LabelEncoder()
@@ -55,3 +47,11 @@ print(model.score(X_train, y_train))
 
 print("TESTING DATA ACCURACY - ")
 print(model.score(X_test, y_test))
+
+
+@app.route('/time')
+def get_current_time():
+    return {'prediction': dataset}
+
+
+app.run(debug=True)
