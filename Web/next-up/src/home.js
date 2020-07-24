@@ -55,11 +55,23 @@ function Home() {
         textSty2 = { margin: 10, width: (window.innerWidth / 3) };
     }
     const [age, setAge] = React.useState('');
+    const [bhk, setBHK] = React.useState('');
+    const [sqft, setSqft] = React.useState('');
+    const [yr, setYR] = React.useState('');
+    const [floor, setFloor] = React.useState('');
     const [furnishing, setFurnish] = React.useState('');
 
     const handleChange = (event) => {
         setAge(event.target.value);
-
+    };
+    const handleBHK = (event) => {
+        setBHK(event.target.value);
+    }; const handleSQFT = (event) => {
+        setSqft(event.target.value);
+    }; const handleYR = (event) => {
+        setYR(event.target.value);
+    }; const handleFloor = (event) => {
+        setFloor(event.target.value);
     };
 
 
@@ -68,7 +80,7 @@ function Home() {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: 'React POST Request Example' })
+            body: JSON.stringify({ city: age, bhk: bhk, floor: floor, age: yr, sqft: sqft, furnish: furnishing })
         };
         fetch('http://localhost:5000/predict', requestOptions)
             .then(response => response.json())
@@ -116,7 +128,7 @@ function Home() {
                                             <MenuItem value={'Whitefield'}>Whitefield</MenuItem>
                                         </Select>
                                     </FormControl>
-                                    <TextField type="number" id="outlined-basic" label="No. of BHK" variant="outlined" style={textSty1} />
+                                    <TextField type="number" value={bhk} onChange={handleBHK} id="outlined-basic" label="No. of BHK" variant="outlined" style={textSty1} />
                                     <FormControl variant="outlined" style={textSty1} className={classes.formControl}>
                                         <InputLabel id="demo-simple-select-outlined-label">Furnishing</InputLabel>
                                         <Select
@@ -134,18 +146,18 @@ function Home() {
                                     </FormControl>
                                 </div><br></br>
                                 <div style={sty}>
-                                    <TextField type="number" id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
-                                    <TextField type="number" id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
+                                    <TextField type="number" value={sqft} onChange={handleSQFT} id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
+                                    <TextField type="number" value={yr} onChange={handleYR} id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
                                 </div><br></br>
                                 <div style={sty}>
-                                    <TextField type="number" id="outlined-basic" label="No. Of Floors" variant="outlined" style={textSty2} />
+                                    <TextField type="number" value={floor} onChange={handleFloor} id="outlined-basic" label="No. Of Floors" variant="outlined" style={textSty2} />
                                 </div>
                                 <br></br><br></br>
-                                <Link to="/result">
+                                <Link to="/result" onClick={handleBtn}>
                                     <Button
                                         variant="contained"
                                         color="primary"
-                                        onClick={handleBtn}
+
                                         style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20, width: (window.innerWidth / 4) }}
                                         disableElevation
                                     >

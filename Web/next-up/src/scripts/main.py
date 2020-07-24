@@ -75,17 +75,22 @@ def myconverter(o):
         return float(o)
 
 
+age = 0
 @app.route('/predict',  methods=['GET', 'POST'])
 def get_prediction():
     if request.method == "POST":
-        framework = request.form.get('title')
-        print(framework)
+        city = request.form.get('city')
+        age = request.form.get('age')
+        floor = request.form.get('floor')
+        bhk = request.form.get('bhk')
+        sqft = request.form.get('sqft')
+        furnish = request.form.get('furnish')
         return {
-            'prediction': str(model.predict([[0, 0, 0, 3, 1, 2550, 5, 3]]))
+            'predictional': str(city)
         }
     if request.method == "GET":
         return {
-            'prediction': str(Ypred)
+            'prediction': str(str(model.predict([[0, 0, 0, 3, 1, 2050, 5, 3]])))
         }
 
 
