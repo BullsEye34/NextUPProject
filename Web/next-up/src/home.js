@@ -120,11 +120,11 @@ function Home() {
                                     </FormControl>
                                 </div><br></br>
                                 <div style={sty}>
-                                    <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
-                                    <TextField id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
+                                    <TextField type="number" id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
+                                    <TextField type="number" id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
                                 </div><br></br>
                                 <div style={sty}>
-                                    <TextField id="outlined-basic" label="No. Of Floors" variant="outlined" style={textSty2} />
+                                    <TextField type="number" id="outlined-basic" label="No. Of Floors" variant="outlined" style={textSty2} />
                                 </div>
                                 <br></br><br></br>
                                 <Link to="/result">
