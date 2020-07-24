@@ -102,7 +102,7 @@ function Home() {
                                             <MenuItem value={'Whitefield'}>Whitefield</MenuItem>
                                         </Select>
                                     </FormControl>
-                                    <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={textSty1} />
+                                    <TextField type="number" id="outlined-basic" label="No. of BHK" variant="outlined" style={textSty1} />
                                     <FormControl variant="outlined" style={textSty1} className={classes.formControl}>
                                         <InputLabel id="demo-simple-select-outlined-label">Furnishing</InputLabel>
                                         <Select
@@ -124,7 +124,7 @@ function Home() {
                                     <TextField id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
                                 </div><br></br>
                                 <div style={sty}>
-                                    <TextField id="outlined-basic" label="City" variant="outlined" style={textSty2} />
+                                    <TextField id="outlined-basic" label="No. Of Floors" variant="outlined" style={textSty2} />
                                 </div>
                                 <br></br><br></br>
                                 <Link to="/result">
