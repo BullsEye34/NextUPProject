@@ -31,17 +31,20 @@ const useStyles = makeStyles({
     },
 });
 
-function getUser() {
-    fetch(`http://127.0.0.1:5000/predict`)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (json) {
-            console.log(json);
-        });
-};
 function Result() {
+    const [predict, setPredict] = React.useState('');
 
+    function getUser() {
+
+        fetch(`http://127.0.0.1:5000/predict`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (json) {
+                console.log(json);
+                setPredict(json.prediction)
+            });
+    };
     getUser();
     if (window.innerWidth <= 500) {
 
