@@ -77,12 +77,16 @@ def myconverter(o):
 
 @app.route('/predict',  methods=['GET', 'POST'])
 def get_prediction():
+    if request.method == "POST":
+        framework = request.form.get('title')
+        print(framework)
+        return {
+            'prediction': str(model.predict([[0, 0, 0, 3, 1, 2550, 5, 3]]))
+        }
     if request.method == "GET":
         return {
             'prediction': str(Ypred)
         }
-    elif request.method == "POST":
-        print("hi")
 
 
 app.run(debug=True)
