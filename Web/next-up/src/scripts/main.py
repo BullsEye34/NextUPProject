@@ -12,6 +12,8 @@ from sklearn.preprocessing import LabelEncoder
 
 from flask import Flask
 
+import json
+
 
 """ from sklearn.tree import DecisionTreeRegressor """
 
@@ -63,3 +65,18 @@ def get_current_time():
 
 
 app.run(debug=True) """
+
+
+def myconverter(o):
+    if isinstance(o, np.float32):
+        return float(o)
+
+
+@app.route('/predict')
+def get_prediction():
+    return {
+        'prediction': str(Ypred)
+    }
+
+
+app.run(debug=True)
