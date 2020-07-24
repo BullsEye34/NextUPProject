@@ -61,6 +61,20 @@ function Home() {
         setAge(event.target.value);
 
     };
+
+
+
+    const handleBtn = (event) => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: 'React POST Request Example' })
+        };
+        fetch('http://localhost:5000/predict', requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data)
+            );
+    };
     const handleChanger = (event) => {
 
         setFurnish(event.target.value);
@@ -97,8 +111,8 @@ function Home() {
                                                 <em>None</em>
                                             </MenuItem>
                                             <MenuItem value={'Bommanahalli'}>Bommanahalli</MenuItem>
-                                            <MenuItem value={'Electronic city'}>Electronic city</MenuItem>
-                                            <MenuItem value={'Indiranagar'}>Indiranagar</MenuItem>
+                                            <MenuItem value={'MG road'}>MG road</MenuItem>
+                                            <MenuItem value={'Jayanagar'}>Jayanagar</MenuItem>
                                             <MenuItem value={'Whitefield'}>Whitefield</MenuItem>
                                         </Select>
                                     </FormControl>
@@ -131,6 +145,7 @@ function Home() {
                                     <Button
                                         variant="contained"
                                         color="primary"
+                                        onClick={handleBtn}
                                         style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20, width: (window.innerWidth / 4) }}
                                         disableElevation
                                     >
