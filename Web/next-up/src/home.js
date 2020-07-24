@@ -8,6 +8,11 @@ import Grid from '@material-ui/core/Grid';
 import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+
 
 const useStyles = makeStyles({
     root: {
@@ -49,7 +54,17 @@ function Home() {
         textSty1 = { margin: 10, width: (window.innerWidth / 6) };
         textSty2 = { margin: 10, width: (window.innerWidth / 3) };
     }
+    const [age, setAge] = React.useState('');
+    const [furnishing, setFurnish] = React.useState('');
 
+    const handleChange = (event) => {
+        setAge(event.target.value);
+
+    };
+    const handleChanger = (event) => {
+
+        setFurnish(event.target.value);
+    };
     const classes = useStyles();
     return (<header className="background">
 
@@ -69,16 +84,47 @@ function Home() {
     </Typography><br></br>
                             <form>
                                 <div style={sty}>
-                                    <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={textSty1} />
-                                    <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={textSty1} />
-                                    <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={textSty1} />
+                                    <FormControl variant="outlined" style={textSty1} className={classes.formControl}>
+                                        <InputLabel id="demo-simple-select-outlined-label">City</InputLabel>
+                                        <Select
+                                            labelId="demo-simple-select-outlined-label"
+                                            id="demo-simple-select-outlined"
+                                            value={age}
+                                            onChange={handleChange}
+                                            label="Age"
+                                        >
+                                            <MenuItem value="">
+                                                <em>None</em>
+                                            </MenuItem>
+                                            <MenuItem value={'Bommanahalli'}>Bommanahalli</MenuItem>
+                                            <MenuItem value={'Electronic city'}>Electronic city</MenuItem>
+                                            <MenuItem value={'Indiranagar'}>Indiranagar</MenuItem>
+                                            <MenuItem value={'Whitefield'}>Whitefield</MenuItem>
+                                        </Select>
+                                    </FormControl>
+                                    <TextField type="number" id="outlined-basic" label="No. of BHK" variant="outlined" style={textSty1} />
+                                    <FormControl variant="outlined" style={textSty1} className={classes.formControl}>
+                                        <InputLabel id="demo-simple-select-outlined-label">Furnishing</InputLabel>
+                                        <Select
+                                            labelId="demo-simple-select-outlined-label"
+                                            id="demo-simple-select-outlined"
+                                            value={furnishing}
+                                            onChange={handleChanger}
+                                            label="Furnishing"
+                                        >
+
+                                            <MenuItem value={true}>Yes</MenuItem>
+                                            <MenuItem value={false}>No</MenuItem>
+
+                                        </Select>
+                                    </FormControl>
                                 </div><br></br>
                                 <div style={sty}>
-                                    <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
-                                    <TextField id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
+                                    <TextField type="number" id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
+                                    <TextField type="number" id="outlined-basic" label="Year Built" variant="outlined" style={textSty} />
                                 </div><br></br>
                                 <div style={sty}>
-                                    <TextField id="outlined-basic" label="City" variant="outlined" style={textSty2} />
+                                    <TextField type="number" id="outlined-basic" label="No. Of Floors" variant="outlined" style={textSty2} />
                                 </div>
                                 <br></br><br></br>
                                 <Link to="/result">
@@ -100,7 +146,7 @@ function Home() {
             <img src={back} className="image"></img>
         </div>
 
-    </header>);
+    </header >);
 }
 
 export default Home;
