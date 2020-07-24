@@ -14,10 +14,13 @@ from flask import Flask
 
 import json
 
+from flask_cors import CORS
+
 
 """ from sklearn.tree import DecisionTreeRegressor """
 
 app = Flask(__name__)
+cors = CORS(app)
 
 
 dataset = pd.read_csv('cleandataset.csv')
