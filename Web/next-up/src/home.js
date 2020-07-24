@@ -54,7 +54,11 @@ function Home() {
         textSty1 = { margin: 10, width: (window.innerWidth / 6) };
         textSty2 = { margin: 10, width: (window.innerWidth / 3) };
     }
+    const [age, setAge] = React.useState('');
 
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
     const classes = useStyles();
     return (<header className="background">
 
@@ -80,6 +84,7 @@ function Home() {
                                             labelId="demo-simple-select-outlined-label"
                                             id="demo-simple-select-outlined"
                                             value={age}
+                                            onChange={handleChange}
                                             label="Age"
                                         >
                                             <MenuItem value="">
