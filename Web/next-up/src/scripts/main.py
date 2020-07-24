@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import LabelEncoder
 
 from flask import Flask
-
+from flask import request
 import json
 
 from flask_cors import CORS
@@ -75,11 +75,14 @@ def myconverter(o):
         return float(o)
 
 
-@app.route('/predict')
+@app.route('/predict',  methods=['GET', 'POST'])
 def get_prediction():
-    return {
-        'prediction': str(Ypred)
-    }
+    if request.method == "GET":
+        return {
+            'prediction': str(Ypred)
+        }
+    elif request.method == "POST":
+        print("hi")
 
 
 app.run(debug=True)
