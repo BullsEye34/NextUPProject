@@ -30,8 +30,19 @@ const useStyles = makeStyles({
         marginBottom: 12,
     },
 });
+
+function getUser(name) {
+    fetch(`https://api.github.com/users/${name}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            console.log(json);
+        });
+};
 function Result() {
 
+    getUser('BullsEye34');
     if (window.innerWidth <= 500) {
 
     } else if (window.innerWidth > 500) {
