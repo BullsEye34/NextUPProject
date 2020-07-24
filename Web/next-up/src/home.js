@@ -97,8 +97,8 @@ function Home() {
                                                 <em>None</em>
                                             </MenuItem>
                                             <MenuItem value={'Bommanahalli'}>Bommanahalli</MenuItem>
-                                            <MenuItem value={'Electronic city'}>Electronic city</MenuItem>
-                                            <MenuItem value={'Indiranagar'}>Indiranagar</MenuItem>
+                                            <MenuItem value={'MG road'}>MG road</MenuItem>
+                                            <MenuItem value={'Jayanagar'}>Jayanagar</MenuItem>
                                             <MenuItem value={'Whitefield'}>Whitefield</MenuItem>
                                         </Select>
                                     </FormControl>
