@@ -55,9 +55,15 @@ function Home() {
         textSty2 = { margin: 10, width: (window.innerWidth / 3) };
     }
     const [age, setAge] = React.useState('');
+    const [furnishing, setFurnish] = React.useState('');
 
     const handleChange = (event) => {
         setAge(event.target.value);
+
+    };
+    const handleChanger = (event) => {
+
+        setFurnish(event.target.value);
     };
     const classes = useStyles();
     return (<header className="background">
@@ -97,7 +103,21 @@ function Home() {
                                         </Select>
                                     </FormControl>
                                     <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={textSty1} />
-                                    <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={textSty1} />
+                                    <FormControl variant="outlined" style={textSty1} className={classes.formControl}>
+                                        <InputLabel id="demo-simple-select-outlined-label">Furnishing</InputLabel>
+                                        <Select
+                                            labelId="demo-simple-select-outlined-label"
+                                            id="demo-simple-select-outlined"
+                                            value={furnishing}
+                                            onChange={handleChanger}
+                                            label="Furnishing"
+                                        >
+
+                                            <MenuItem value={true}>Yes</MenuItem>
+                                            <MenuItem value={false}>No</MenuItem>
+
+                                        </Select>
+                                    </FormControl>
                                 </div><br></br>
                                 <div style={sty}>
                                     <TextField id="outlined-basic" label="Living Sq. Ft." variant="outlined" style={textSty} />
@@ -126,7 +146,7 @@ function Home() {
             <img src={back} className="image"></img>
         </div>
 
-    </header>);
+    </header >);
 }
 
 export default Home;
