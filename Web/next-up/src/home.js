@@ -69,7 +69,23 @@ function Home() {
     </Typography><br></br>
                             <form>
                                 <div style={sty}>
-                                    <TextField id="outlined-basic" label="No. of Bedrooms" variant="outlined" style={textSty1} />
+                                    <FormControl variant="outlined" className={classes.formControl}>
+                                        <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
+                                        <Select
+                                            labelId="demo-simple-select-outlined-label"
+                                            id="demo-simple-select-outlined"
+                                            value={age}
+                                            onChange={handleChange}
+                                            label="Age"
+                                        >
+                                            <MenuItem value="">
+                                                <em>None</em>
+                                            </MenuItem>
+                                            <MenuItem value={10}>Ten</MenuItem>
+                                            <MenuItem value={20}>Twenty</MenuItem>
+                                            <MenuItem value={30}>Thirty</MenuItem>
+                                        </Select>
+                                    </FormControl>
                                     <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={textSty1} />
                                     <TextField id="outlined-basic" label="No. of Bathrooms" variant="outlined" style={textSty1} />
                                 </div><br></br>
