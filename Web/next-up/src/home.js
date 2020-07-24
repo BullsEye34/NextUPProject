@@ -61,6 +61,10 @@ function Home() {
         setAge(event.target.value);
 
     };
+
+    const handleBtn = (event) => {
+
+    };
     const handleChanger = (event) => {
 
         setFurnish(event.target.value);
