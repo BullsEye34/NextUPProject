@@ -12,6 +12,9 @@ from sklearn.preprocessing import LabelEncoder
 
 from flask import Flask
 
+
+""" from sklearn.tree import DecisionTreeRegressor """
+
 app = Flask(__name__)
 
 
@@ -34,9 +37,11 @@ print(X)
 print(y)
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=0)
+    X, y, test_size=0.5, random_state=0)
 
 model = RandomForestRegressor(max_depth=5, random_state=14)
+
+""" model = DecisionTreeRegressor(max_depth=10, random_state=14) """
 model.fit(X_train, y_train)
 
 
