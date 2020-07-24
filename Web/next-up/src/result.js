@@ -77,7 +77,7 @@ function Result() {
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
                                         Well, based on Whatever you've given us.... <br></br>We think that your dream property might cost you around<br></br><br></br></Typography>
-                                    <Typography style={{ fontSize: 50 }} color="textSecondary" gutterBottom>₹ {predict.toString().substring(1,)}<br></br><br></br></Typography>
+                                    <Typography style={{ fontSize: 50 }} color="textSecondary" gutterBottom>₹ {predict.toString().substring(1, 10)}<br></br><br></br></Typography>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>You can click on the button below, so that we can get you in touch with one of our agents.
     </Typography><br></br>
                                     <br></br>
@@ -85,8 +85,7 @@ function Result() {
                                         variant="contained"
                                         color="primary"
                                         style={{ backgroundColor: "#681AFF", color: 'white', fontSize: 20, width: (window.innerWidth / 4) }}
-                                        disableElevation
-                                    >
+                                        disableElevation>
                                         Real Estate Agent</Button>
                                 </CardContent>
 
