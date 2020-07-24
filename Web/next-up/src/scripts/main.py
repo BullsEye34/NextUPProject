@@ -48,10 +48,13 @@ print(model.score(X_train, y_train))
 print("TESTING DATA ACCURACY - ")
 print(model.score(X_test, y_test))
 
+Ypred = model.predict([[0, 0, 0, 3, 1, 2050, 5, 3]])
+print(Ypred)
 
-@app.route('/time')
+
+""" @app.route('/time')
 def get_current_time():
     return {'prediction': dataset}
 
 
-app.run(debug=True)
+app.run(debug=True) """
