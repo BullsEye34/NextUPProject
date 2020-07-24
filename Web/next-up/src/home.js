@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 const useStyles = makeStyles({
@@ -79,7 +80,6 @@ function Home() {
                                             labelId="demo-simple-select-outlined-label"
                                             id="demo-simple-select-outlined"
                                             value={age}
-                                            onChange={handleChange}
                                             label="Age"
                                         >
                                             <MenuItem value="">
