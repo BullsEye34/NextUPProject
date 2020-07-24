@@ -31,8 +31,8 @@ const useStyles = makeStyles({
     },
 });
 
-function getUser(name) {
-    fetch(`https://api.github.com/users/${name}`)
+function getUser() {
+    fetch(`http://127.0.0.1:5000/predict`)
         .then(function (response) {
             return response.json();
         })
@@ -42,7 +42,7 @@ function getUser(name) {
 };
 function Result() {
 
-    getUser('BullsEye34');
+    getUser();
     if (window.innerWidth <= 500) {
 
     } else if (window.innerWidth > 500) {
