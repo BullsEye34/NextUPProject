@@ -78,8 +78,8 @@ function Home() {
     </Typography><br></br>
                             <form>
                                 <div style={sty}>
-                                    <FormControl variant="outlined" className={classes.formControl}>
-                                        <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
+                                    <FormControl variant="outlined" style={textSty1} className={classes.formControl}>
+                                        <InputLabel id="demo-simple-select-outlined-label">City</InputLabel>
                                         <Select
                                             labelId="demo-simple-select-outlined-label"
                                             id="demo-simple-select-outlined"
@@ -90,9 +90,10 @@ function Home() {
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={10}>Ten</MenuItem>
-                                            <MenuItem value={20}>Twenty</MenuItem>
-                                            <MenuItem value={30}>Thirty</MenuItem>
+                                            <MenuItem value={'Bommanahalli'}>Bommanahalli</MenuItem>
+                                            <MenuItem value={'Electronic city'}>Electronic city</MenuItem>
+                                            <MenuItem value={'Indiranagar'}>Indiranagar</MenuItem>
+                                            <MenuItem value={'Whitefield'}>Whitefield</MenuItem>
                                         </Select>
                                     </FormControl>
                                     <TextField id="outlined-basic" label="No. of Floors" variant="outlined" style={textSty1} />
