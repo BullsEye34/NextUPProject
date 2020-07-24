@@ -38,8 +38,8 @@ model.fit(X_train, y_train)
 
 print("RANDOM FOREST REGRESSOR")
 
-print("TRAINING DATA ACCURACY - ", end="")
+print("TRAINING DATA ACCURACY - ")
 print(model.score(X_train, y_train))
 
-print("TESTING DATA ACCURACY - ", end="")
+print("TESTING DATA ACCURACY - ")
 print(model.score(X_test, y_test))
