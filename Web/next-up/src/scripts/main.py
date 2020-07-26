@@ -65,8 +65,6 @@ print(Ypred)
 """ @app.route('/time')
 def get_current_time():
     return {'prediction': dataset}
-
-
 app.run(debug=True) """
 
 
@@ -76,21 +74,36 @@ def myconverter(o):
 
 
 age = 0
-@app.route('/predict',  methods=['GET', 'POST'])
+fur = 1
+@app.route('/predict',)
 def get_prediction():
-    if request.method == "POST":
-        city = request.form.get('city')
-        age = request.form.get('age')
-        floor = request.form.get('floor')
-        bhk = request.form.get('bhk')
-        sqft = request.form.get('sqft')
-        furnish = request.form.get('furnish')
+    city = request.args.get('city')
+    age = request.args.get('age')
+    floor = request.args.get('floor')
+    bhk = request.args.get('bhk')
+    sqft = request.args.get('sqft')
+    furnish = request.args.get('furnish')
+
+    if furnish == "true":
+        fur = 1
+    else:
+        fur = 0
+
+    if city == "Jayanagar":
         return {
-            'predictional': str(city)
+            'prediction': str(str(model.predict([[0, 1, 0, bhk, fur, sqft, age, floor]]))),
         }
-    if request.method == "GET":
+    elif city == "MG Road":
         return {
-            'prediction': str(str(model.predict([[0, 0, 0, 3, 1, 2050, 5, 3]])))
+            'prediction': str(str(model.predict([[0, 0, 1, bhk, fur, sqft, age, floor]]))),
+        }
+    elif city == "Bommanahalli":
+        return {
+            'prediction': str(str(model.predict([[1, 0, 0, bhk, fur, sqft, age, floor]]))),
+        }
+    else:
+        return {
+            'prediction': str(str(model.predict([[0, 0, 0, 3, 1, 2050, 5, 3]]))),
         }
 
 
