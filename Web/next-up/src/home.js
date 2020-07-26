@@ -82,7 +82,7 @@ function Home() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ city: age, bhk: bhk, floor: floor, age: yr, sqft: sqft, furnish: furnishing })
         };
-        fetch('http://localhost:5000/predict?city=' + age, requestOptions)
+        fetch('http://localhost:5000/predict?city=' + age + "&bhk=" + bhk + "&floor=" + floor + "&age=" + yr + "&sqft=" + sqft + "&furnish=" + furnishing, requestOptions)
             .then(response => response.json())
             .then(data => console.log(data)
             );
@@ -153,7 +153,7 @@ function Home() {
                                     <TextField type="number" value={floor} onChange={handleFloor} id="outlined-basic" label="No. Of Floors" variant="outlined" style={textSty2} />
                                 </div>
                                 <br></br><br></br>
-                                <Link to="/result" onClick={handleBtn}>
+                                <Link to="/result" bhk={bhk} city={age} floor={floor} age={yr} sqft={sqft} furnish={furnishing} onClick={handleBtn}>
                                     <Button
                                         variant="contained"
                                         color="primary"
