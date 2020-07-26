@@ -82,7 +82,7 @@ function Home() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ city: age, bhk: bhk, floor: floor, age: yr, sqft: sqft, furnish: furnishing })
         };
-        fetch('http://localhost:5000/predict', requestOptions)
+        fetch('http://localhost:5000/predict?city=' + age, requestOptions)
             .then(response => response.json())
             .then(data => console.log(data)
             );
