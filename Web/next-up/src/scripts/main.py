@@ -65,8 +65,6 @@ print(Ypred)
 """ @app.route('/time')
 def get_current_time():
     return {'prediction': dataset}
-
-
 app.run(debug=True) """
 
 
@@ -79,12 +77,12 @@ age = 0
 @app.route('/predict',  methods=['GET', 'POST'])
 def get_prediction():
     if request.method == "POST":
-        city = request.form.get('city')
-        age = request.form.get('age')
-        floor = request.form.get('floor')
-        bhk = request.form.get('bhk')
-        sqft = request.form.get('sqft')
-        furnish = request.form.get('furnish')
+        city = request.args.get('city')
+        age = request.args.get('age')
+        floor = request.args.get('floor')
+        bhk = request.args.get('bhk')
+        sqft = request.args.get('sqft')
+        furnish = request.args.get('furnish')
         return {
             'predictional': str(city)
         }
